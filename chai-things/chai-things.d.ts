@@ -6,6 +6,26 @@
 /// <reference path="../chai/chai.d.ts" />
 
 declare namespace Chai {
+    interface KeyFilter {
+        (): Assertion;
+        equal: Equal;
+        equals: Equal;
+        eq: Equal;
+        eql: Equal;
+        eqls: Equal;
+        not: Assertion;
+        have: Assertion;
+        that: Assertion;
+    }
+
+    interface Include {
+        a: Item;
+        an: Item;
+        one: Something;
+        some: Something;
+        something: Something;
+    }
+
     interface ArrayAssertion {
         include: ArrayInclude;
         contain: ArrayInclude;
